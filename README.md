@@ -36,10 +36,6 @@ rails g spree_gateway:install
 bundle exec rails g spree_i18n:install
 `
 
-`
-rails g spree_globalize:install
-`
-
 create admin:
 
 `
