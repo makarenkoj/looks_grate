@@ -1,24 +1,47 @@
-# README
+# Store
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Build Ruby on Rails, gem spree
 
-Things you may want to cover:
+ruby '2.6.4'
 
-* Ruby version
+gem 'rails', '~> 6.0.3'
 
-* System dependencies
+[Install ImageMagick](https://imagemagick.org/script/download.php#unix)
 
-* Configuration
+`
+bundle install
+`
 
-* Database creation
+Note: if you run into Bundler could not find compatible versions for gem "sprockets": error message, please run
 
-* Database initialization
+`
+bundle update
+`
 
-* How to run the test suite
+Use the install generators to set up Spree
 
-* Services (job queues, cache servers, search engines, etc.)
+`
+rails g spree:install --user_class=Spree::User
+`
 
-* Deployment instructions
+`
+rails g spree:auth:install
+`
 
-* ...
+`
+rails g spree_gateway:install
+`
+
+`
+bundle exec rails g spree_i18n:install
+`
+
+`
+rails g spree_globalize:install
+`
+
+create admin:
+
+`
+rake spree_auth:admin:create
+`
